@@ -38,11 +38,18 @@
         "psr-4": {
             "App\\": "app/"
         },
+        
         "classmap": [
             "database/seeds",
             "database/factories"
+        ],
+        "files" : [
+            "app/helper.php"
         ]
     },
+
+  
+
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"

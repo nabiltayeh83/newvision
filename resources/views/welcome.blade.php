@@ -84,7 +84,7 @@
                     Laravel
                 </div>
 
-            
+            {{sum(1,2)}}
      
             {!! Form::open() !!}
 

@@ -84,6 +84,7 @@
                     Laravel
                 </div>
 
+            Gaza Today
      
             {!! Form::open() !!}
 

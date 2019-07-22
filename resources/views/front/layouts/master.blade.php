@@ -3,7 +3,9 @@
     <head>
         <meta charset=utf-8>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>New Vision</title>
+        <title>{{siteTitle()}}</title>
+        <meta name="description" content="{{siteDetails()}}">
+        <meta name="keywords" content="{{siteKeywords()}}">
 
         <!-- Load css styles -->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}" />
@@ -28,7 +30,7 @@
         href="{{ asset('images/apple-touch-icon-72.png') }}">
         <link rel="apple-touch-icon-precomposed" 
         href="{{ asset('images/ico/apple-touch-icon-57.png') }}">
-        <link rel="shortcut icon" href="{{ asset('images/ico/favicon.ico') }}">
+        <link rel="shortcut icon" href="{{ asset('images/newvision/'.siteIco()) }}">
     </head>
     
     <body style="direction:ltr;">

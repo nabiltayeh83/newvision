@@ -11,11 +11,10 @@
                     </button>
                     <!-- Main navigation -->
                     <div class="nav-collapse collapse pull-right">
-                        <ul class="nav" id="top-navigation">
+                        <ul class="nav">
                             <li class="active"><a href="#home">الرئيسية</a></li>
                             <li><a href="#about">عن الشركة</a></li>
                             <li><a href="#service">خدماتنا</a></li>
-                            
                             <li><a href="#orders">اطلب الخدمة</a></li>
                             <li><a href="#contact">إتصل بنا</a></li>
                         </ul>

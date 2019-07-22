@@ -5,13 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>New Vision</title>
 
-        <!-- Load Roboto font -->
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <!-- Load css styles -->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-responsive.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('css/pluton.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-rtl.css') }}">
+        <link rel="stylesheet" href="{{ asset('fonts/cairo.css') }}">
         <!--[if IE 7]>
             <link rel="stylesheet" type="text/css" href="{{ asset('css/pluton-ie7.css') }}" />
         <![endif]-->
@@ -30,7 +31,7 @@
         <link rel="shortcut icon" href="{{ asset('images/ico/favicon.ico') }}">
     </head>
     
-    <body>
+    <body style="direction:ltr;">
      
 
     <!-- Navbar section -->

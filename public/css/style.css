@@ -27,12 +27,17 @@
 /*
 1. General
 **********************************************************************/
+
+
+
  body {
-    font-family:'Roboto', sans-serif;
+    font-family:cairo;
     color: #FFF;
     line-height:1.2em;
     font-size:17px;
     line-height:20px;
+    text-align: right;
+    direction: rtl;
 }
 a {
     color:#181A1C;
@@ -53,6 +58,8 @@ p {
     font-weight: 100;
     color: #fff;
 }
+
+
 .navbar {
     background: #181A1C;
     margin-bottom:0;
@@ -70,10 +77,13 @@ p {
     filter: none;
     border: none;
     box-shadow: none;
+    
+    
 }
 .navbar .brand img {
     width:120px;
     height:40px;
+
 }
 .navbar .nav > li > a {
     text-transform:uppercase;
@@ -88,12 +98,16 @@ p {
     text-shadow: none;
     color: #fff;
     transition: border-color 1s ease;
+    
+    
 }
 .navbar .nav > li:hover> a, .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
     border: 1px solid #FECE1A;
     color: #fff;
     background-color: #181A1C;
     transition: border-color 1s ease;
+
+
 }
 .nav-pills {
     margin-bottom: 30px;
@@ -149,6 +163,12 @@ p {
 .highlighted-box h1, .highlighted-box p {
     color: #181A1C !important;
 }
+
+#top-navigation li{
+    background-color: #FECE1A;
+    direction: ltr;
+}
+
 .circle-border {
     display: inline-block;
     -webkit-border-radius: 500px;
@@ -850,6 +870,9 @@ p {
     .navbar-fixed-top, .navbar-fixed-bottom {
         position: fixed;
     }
+
+
+
     .navbar .nav > li > a {
         line-height: 20px;
         vertical-align: middle;
@@ -865,6 +888,9 @@ p {
     .nav-collapse {
         clear: both;
     }
+
+
+
     .nav-collapse .nav {
         float: none;
         margin: 0 0 10px;

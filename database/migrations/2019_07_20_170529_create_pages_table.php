@@ -17,7 +17,7 @@ class CreatePagesTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->text('details');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('filetitle')->nullable();
             $table->string('fileattach')->nullable();
             $table->timestamps();

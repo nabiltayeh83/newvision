@@ -57,6 +57,9 @@ p {
     padding: 10px;
     font-weight: 100;
     color: #fff;
+    line-height: 2;
+    direction: rtl;
+    text-align: right;
 }
 
 
@@ -427,13 +430,13 @@ p {
 ***************************************/
 .service{
     margin-top:20px;
+    direction: rtl;
 }
  .service, .service h2 {
     padding-top:15px;
 }
 .service p {
-    padding:0px 50px;
-    height:60px;
+    padding:0px 10px;
 }
 .service img {
     width:150px;

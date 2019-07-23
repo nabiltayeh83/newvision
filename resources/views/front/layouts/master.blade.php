@@ -3,9 +3,9 @@
     <head>
         <meta charset=utf-8>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{siteTitle()}}</title>
-        <meta name="description" content="{{siteDetails()}}">
-        <meta name="keywords" content="{{siteKeywords()}}">
+        <title>{{$sitesettings->title}}</title>
+        <meta name="description" content="{{$sitesettings->details}}">
+        <meta name="keywords" content="{{$sitesettings->keywords}}">
 
         <!-- Load css styles -->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}" />
@@ -30,7 +30,7 @@
         href="{{ asset('images/apple-touch-icon-72.png') }}">
         <link rel="apple-touch-icon-precomposed" 
         href="{{ asset('images/ico/apple-touch-icon-57.png') }}">
-        <link rel="shortcut icon" href="{{ asset('images/newvision/'.siteIco()) }}">
+        <link rel="shortcut icon" href="{{ asset('images/newvision/'. $sitesettings->siteico) }}">
     </head>
     
     <body style="direction:ltr;">

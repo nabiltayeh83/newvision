@@ -11,12 +11,12 @@
                     </button>
                     <!-- Main navigation -->
                     <div class="nav-collapse collapse pull-right">
-                        <ul class="nav">
-                            <li class="active"><a href="#home">الرئيسية</a></li>
-                            <li><a href="#about">عن الشركة</a></li>
-                            <li><a href="#service">خدماتنا</a></li>
-                            <li><a href="#orders">اطلب الخدمة</a></li>
-                            <li><a href="#contact">إتصل بنا</a></li>
+                        <ul class="nav" style="direction:rtl;">
+                            <li class="active"><a href="{{route('HomePage')}}">الرئيسية</a></li>
+                            <li><a href="{{route('aboutUs')}}">عن الشركة</a></li>
+                            <li><a href="{{route('category')}}">خدماتنا</a></li>
+                            <li><a href="{{route('order')}}">اطلب الخدمة</a></li>
+                            <li><a href="{{route('contactUs')}}">إتصل بنا</a></li>
                         </ul>
                     </div>
                     <!-- End main navigation -->

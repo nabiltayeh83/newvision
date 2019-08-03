@@ -1,8 +1,13 @@
+@extends('front.layouts.master')
+
+@section('title', 'اطلب الخدمة')
+
+
+@section('content')
 <div id="orders" class="section secondary-section">
             <div class="container">
                 <div class="title">
-                    <h1>Orders</h1>
-                    <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
+                    <h1>اطلب الخدمة</h1>
                 </div>
                 <div class="price-table row-fluid">
                     <div class="span4 price-column">
@@ -36,9 +41,8 @@
                         <a href="#" class="button button-ps">BUY</a>
                     </div>
                 </div>
-                <div class="centered">
-                    <p class="price-text">We Offer Custom Plans. Contact Us For More Info.</p>
-                    <a href="#contact" class="button">Contact Us</a>
-                </div>
+             
             </div>
         </div>
+
+@endsection

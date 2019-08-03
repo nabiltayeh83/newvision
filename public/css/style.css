@@ -27,17 +27,14 @@
 /*
 1. General
 **********************************************************************/
-
-
-
  body {
-    font-family:cairo;
+    font-family: cairo;
     color: #FFF;
     line-height:1.2em;
     font-size:17px;
     line-height:20px;
-    text-align: right;
     direction: rtl;
+    text-align: right;
 }
 a {
     color:#181A1C;
@@ -49,6 +46,7 @@ a:hover {
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
+    direction: rtl;
 }
 h1 {
     margin: 10px;
@@ -57,12 +55,7 @@ p {
     padding: 10px;
     font-weight: 100;
     color: #fff;
-    line-height: 2;
-    direction: rtl;
-    text-align: right;
 }
-
-
 .navbar {
     background: #181A1C;
     margin-bottom:0;
@@ -80,13 +73,10 @@ p {
     filter: none;
     border: none;
     box-shadow: none;
-    
-    
 }
 .navbar .brand img {
     width:120px;
     height:40px;
-
 }
 .navbar .nav > li > a {
     text-transform:uppercase;
@@ -101,16 +91,12 @@ p {
     text-shadow: none;
     color: #fff;
     transition: border-color 1s ease;
-    
-    
 }
 .navbar .nav > li:hover> a, .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
     border: 1px solid #FECE1A;
     color: #fff;
     background-color: #181A1C;
     transition: border-color 1s ease;
-
-
 }
 .nav-pills {
     margin-bottom: 30px;
@@ -166,12 +152,6 @@ p {
 .highlighted-box h1, .highlighted-box p {
     color: #181A1C !important;
 }
-
-#top-navigation li{
-    background-color: #FECE1A;
-    direction: ltr;
-}
-
 .circle-border {
     display: inline-block;
     -webkit-border-radius: 500px;
@@ -430,13 +410,13 @@ p {
 ***************************************/
 .service{
     margin-top:20px;
-    direction: rtl;
 }
  .service, .service h2 {
     padding-top:15px;
 }
 .service p {
-    padding:0px 10px;
+    padding:0px 50px;
+    height:60px;
 }
 .service img {
     width:150px;
@@ -853,6 +833,11 @@ p {
     top:7px;
     color:#fff;
 }
+
+.navbar .nav > li {
+    float: right;
+}
+
 /*
 4 Responsible
 ********************************************************************/
@@ -873,9 +858,6 @@ p {
     .navbar-fixed-top, .navbar-fixed-bottom {
         position: fixed;
     }
-
-
-
     .navbar .nav > li > a {
         line-height: 20px;
         vertical-align: middle;
@@ -891,9 +873,6 @@ p {
     .nav-collapse {
         clear: both;
     }
-
-
-
     .nav-collapse .nav {
         float: none;
         margin: 0 0 10px;
@@ -931,3 +910,6 @@ p {
         margin-top:30px;
     }
 }
+
+
+

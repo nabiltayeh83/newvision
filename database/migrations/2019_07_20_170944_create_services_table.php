@@ -21,7 +21,7 @@ class CreateServicesTable extends Migration
             $table->text('stages')->nullable();
             $table->string('period')->nullable();
             $table->string('year')->nullable();
-            $table->string('vedio')->nullable();
+            $table->text('vedio')->nullable();
             $table->string('filetitle')->nullable();
             $table->string('fileattach')->nullable();
             $table->string('image');

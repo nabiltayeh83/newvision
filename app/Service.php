@@ -8,4 +8,12 @@ class Service extends Model
 {
     protected $fillable = ['projectname', 'customername', 'category_id', 'stages', 'period', 'year', 'vedio', 
     'filetitle', 'fileattach', 'image', 'is_active'];
+
+
+
+    public function images(){
+        return $this->hasMany('App\Image');
+    }
+
+
 }

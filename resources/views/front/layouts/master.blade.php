@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="ar">
+
     <head>
         <meta charset=utf-8>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{$sitesettings->title}}</title>
+        <title>@yield('title') - {{$sitesettings->title}}</title>
         <meta name="description" content="{{$sitesettings->details}}">
         <meta name="keywords" content="{{$sitesettings->keywords}}">
 
@@ -34,31 +35,16 @@
     </head>
     
     <body style="direction:ltr;">
-     
 
-    <!-- Navbar section -->
-    @include('front.layouts.navbar')
+    @include('front.navbar')
 
-    <!-- Slider section -->
-    @include('front.layouts.slider')
 
-    <!-- About us section  -->
-    @include('front.layouts.about')
-    
-    <!-- Service section  -->
-    @include('front.layouts.services')
+    <div id="home">
+          @yield('content')
+    </div>
+ 
 
-    <!-- Orders section  -->
-    @include('front.layouts.orders')
-    
-    <!-- Maillist section start -->
-    @include('front.layouts.maillist')
-     
-    <!-- Contact section start -->
-    @include('front.layouts.contact')
-
-    <!-- Footer section start -->
-    @include('front.layouts.footer')
+    @include('front.footer')
      
 
 

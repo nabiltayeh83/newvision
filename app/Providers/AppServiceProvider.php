@@ -38,11 +38,11 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
 
 
-        view()->composer('front.layouts.master', function($view){
+        view()->composer(['front.index'], function($view){
             $view->with('aboutus', Page::find(1));
         });
 
-        view()->composer('front.layouts.master', function($view){
+        view()->composer('front.index', function($view){
             $view->with('contactus', Page::find(2));
         });
  
@@ -51,7 +51,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
 
-        view()->composer('front.layouts.master', function($view){
+        view()->composer('front.index', function($view){
             $view->with('categories', Category::where('is_active', 1)->get());
         });
 

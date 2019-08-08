@@ -29,6 +29,7 @@
     background: #FECE1A;
     opacity:0.85;
     filter: alpha(opacity=85);
+
 }
 .da-slider .container {
     margin-top:-30px;
@@ -41,7 +42,7 @@
     height: 100%;
     top: 0px;
     left: 0px;
-    text-align: left;
+    text-align: right;
 }
 .da-slide-current {
     z-index: 900;
@@ -74,13 +75,19 @@
     filter: alpha(opacity=100);
 }
 
-.da-slide h2,
-.da-slide h4{
+.da-slide h2{
     color: #181A1C;
-    text-transform:uppercase;
-      white-space: nowrap;
     z-index: 10;
+    margin: -10px;
 }
+
+.da-slide h4{
+    color: #fff;
+    z-index: 10;
+    margin: -10px;
+    line-height: 170%;
+}
+
 .da-slide h2 {
     font-size: 33px;
     width: 50%;
@@ -1290,7 +1297,7 @@
     } 
     
     .da-slide .da-link {
-        top:65%;
+        top:45%;
     }   
 }
 
@@ -1315,7 +1322,7 @@
     .da-slide .da-link{
         margin:0;
         font-size:12px;
-        top:150px; 
+        top:100px; 
     }  
 }
 

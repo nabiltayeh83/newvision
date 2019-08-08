@@ -19,6 +19,7 @@ class CreateSitesettingsTable extends Migration
             $table->text('details');
             $table->text('keywords');
             $table->string('siteico');
+            $table->string('logo');
             $table->timestamps();
         });
     }

@@ -1,32 +1,3 @@
-/*
- * A Design by GraphBerry
- * Author: GraphBerry
- * Author URL: http://graphberry.com
- * License: http://graphberry.com/pages/license
- */
-
-/* Table of content
-1.General - This is created general styles and overide some bootstrap classes.
-2.Layout
- 2.1 Animations
- 2.2 Buttons
- 2.3 Thumbnail - overide bootstrap thumbnail and add mased efect
- 2.4 Socail icons -style for social icons list
-3 Sections - definition for section and subsection
- 3.1 Services
- 3.2 Portfolio
- 3.3 About
- 3.4 Clients
- 3.5 Price table
- 3.6 Newsletter
- 3.7 Contact
- 3.8 Footer
-4 Responsive 
-**********************************************************************/
-
-/*
-1. General
-**********************************************************************/
  body {
     font-family: cairo;
     color: #FFF;
@@ -47,6 +18,7 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     direction: rtl;
+    line-height: 1.5;
 }
 h1 {
     margin: 10px;
@@ -55,6 +27,7 @@ p {
     padding: 10px;
     font-weight: 100;
     color: #fff;
+    line-height: 1.9;
 }
 .navbar {
     background: #181A1C;
@@ -344,7 +317,7 @@ p {
     padding-bottom: 50px;
 }
 .section .container {
-    padding-top:50px;
+    padding-top:20px;
 }
 .section .title {
     text-align: center;
@@ -378,6 +351,7 @@ p {
 }
 .secondary-section {
     background:#FECE1A;
+    min-height: 550px;
 }
 .secondary-section .title {
     border-bottom: 1px solid #181A1C;
@@ -419,8 +393,7 @@ p {
     height:60px;
 }
 .service img {
-    width:150px;
-    height:150px;
+    width:100%;
 }
 /*
 3.2 Portfolio
@@ -611,8 +584,8 @@ p {
 3.5 Price table
 ******************************************************************/
  .price-table {
-    margin-top: 70px;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 .price-column {
     background-color:white;
@@ -910,6 +883,179 @@ p {
         margin-top:30px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.auto-grid {
+    --auto-grid-min-size: 20rem;
+  }
+  
+  .auto-grid > * {
+    max-width: 400px;
+  }
+  
+  .auto-grid > * + * {
+    margin-top: 1rem;
+  }
+  
+  @supports(display: grid) {
+    .auto-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+      grid-gap: 1rem;
+    }
+    
+    .auto-grid > * {
+      max-width: unset;
+    }
+  
+    .auto-grid > * + * {
+      margin-top: unset;
+    }
+  }
+  
+  /*
+    WRAPPER
+    A utility with a max width that contains child elements and horizontal centers them
+  */
+  .wrapper {
+    max-width: 65rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  
+
+  
+  .auto-grid li {
+    text-align: center;
+    font-size: 1.2rem;
+    list-style-type: none;
+    line-height: 1.5;
+  }
+
+
+
+
+
+
+
+
+  * {box-sizing: border-box;}
+
+.imgcontainer {
+  position: relative;
+  width: 100%;
+}
+
+.imageeffect {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; 
+  top: 0; 
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 24px;
+  padding: 20px;
+  text-align: right;
+}
+
+
+.overlay h4{
+    margin-top: 15%; 
+  }
+
+
+.overlayproname a:link, a:visited, a:hover, a:active {
+    color: white;
+  }
+
+.imgcontainer:hover .overlay {
+  opacity: 1;
+}
+
+.imgcontainer:hover .imageeffect {
+    opacity: 0.1;
+  }
+
+.overlay h4{
+    color: #fff;
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+.auto-grid-three {
+    --auto-grid-min-size: 18rem;
+  }
+  
+  .auto-grid-three > * {
+    max-width: 400px;
+  }
+  
+  .auto-grid-three > * + * {
+    margin-top: 1rem;
+  }
+  
+  @supports(display: grid) {
+    .auto-grid-three {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+      grid-gap: 1rem;
+    }
+    
+    .auto-grid-three > * {
+      max-width: unset;
+    }
+  
+    .auto-grid-three > * + * {
+      margin-top: unset;
+    }
+  }
+  
+  /*
+    WRAPPER
+    A utility with a max width that contains child elements and horizontal centers them
+  */
+  .wrapper-three {
+    max-width: 65rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  
+
+  
+  .auto-grid-three li {
+    text-align: center;
+    font-size: 1.2rem;
+    list-style-type: none;
+    line-height: 1.5;
+  }
 
 
 

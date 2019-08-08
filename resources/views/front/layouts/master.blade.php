@@ -34,13 +34,25 @@
         <link rel="shortcut icon" href="{{ asset('images/newvision/'. $sitesettings->siteico) }}">
     </head>
     
-    <body style="direction:ltr;">
+    <body>
 
     @include('front.navbar')
 
 
     <div id="home">
-          @yield('content')
+        <div id="contact" class="contact">
+            <div class="section secondary-section">
+                @if(Route::currentRouteName() != 'HomePage')
+                    <div class="container">
+                        <div class="title">
+                            <h1>@yield('title')</h1>
+                        </div>
+                    <div>
+                @endif
+
+            @yield('content')
+            </div>
+        </div>
     </div>
  
 

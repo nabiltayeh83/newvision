@@ -9,7 +9,8 @@ use Blade;
 use App\{
     Sitesetting,
     Page,
-    Category
+    Category,
+    Service
     };
 
 class AppServiceProvider extends ServiceProvider
@@ -38,22 +39,20 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
 
 
-        view()->composer(['front.index'], function($view){
-            $view->with('aboutus', Page::find(1));
+        view()->composer(['front.slider','front.index'], function($view){
+            $view->with('servicesSlider', Service::where('is_active', 1)->orderBy('id', 'desc')->take(5)->get());
         });
 
-        view()->composer('front.index', function($view){
-            $view->with('contactus', Page::find(2));
-        });
- 
+    
         view()->composer('front.layouts.master', function($view){
             $view->with('sitesettings', Sitesetting::find(1));
         });
 
 
         view()->composer('front.index', function($view){
-            $view->with('categories', Category::where('is_active', 1)->get());
+            $view->with('lastServices', Service::where('is_active', 1)->orderBy('id', 'desc')->take(12)->get());
         });
+
 
     }
 }

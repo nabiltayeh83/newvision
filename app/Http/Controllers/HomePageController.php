@@ -43,7 +43,7 @@ class HomePageController extends Controller
 
 
     public function services($id){
-        $results = Service::where('category_id', $id)->where('is_active', 1)->paginate(8);
+        $results = Service::where('category_id', $id)->where('is_active', 1)->orderBy('id', 'desc')->paginate(12);
         $category = Category::find($id)->title;
         return view('front.service', compact('results', 'category'));
     }

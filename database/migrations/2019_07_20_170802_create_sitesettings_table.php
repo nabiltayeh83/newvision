@@ -16,7 +16,7 @@ class CreateSitesettingsTable extends Migration
         Schema::create('sitesettings', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
-            $table->text('details');
+            $table->text('description');
             $table->text('keywords');
             $table->string('siteico');
             $table->string('logo');

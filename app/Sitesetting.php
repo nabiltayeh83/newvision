@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sitesetting extends Model
 {
-    protected $fillable = ['title', 'details', 'keywords', 'siteico', 'logo'];
+    protected $fillable = ['title', 'description', 'keywords', 'siteico', 'logo'];
 }

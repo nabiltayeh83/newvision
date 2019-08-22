@@ -4,9 +4,9 @@
     <head>
         <meta charset=utf-8>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>@yield('title') - {{$sitesettings->title}}</title>
-        <meta name="description" content="{{$sitesettings->details}}">
-        <meta name="keywords" content="{{$sitesettings->keywords}}">
+        <title>@yield('title') - @if(isset($sitesettings->title)) {{$sitesettings->title}} @endif</title>
+        <meta name="description" content="@if(isset($sitesettings->description)) {{$sitesettings->description}} @endif">
+        <meta name="keywords" content="@if(isset($sitesettings->keywords)) {{$sitesettings->keywords}} @endif">
 
         <!-- Load css styles -->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}" />
@@ -31,7 +31,10 @@
         href="{{ asset('images/apple-touch-icon-72.png') }}">
         <link rel="apple-touch-icon-precomposed" 
         href="{{ asset('images/ico/apple-touch-icon-57.png') }}">
-        <link rel="shortcut icon" href="{{ asset('images/newvision/'. $sitesettings->siteico) }}">
+
+        @if(isset($sitesettings->siteico))
+        <link rel="shortcut icon" href="{{ asset('storage/images/'. $sitesettings->siteico) }}">
+        @endif
     </head>
     
     <body>
@@ -40,19 +43,32 @@
 
 
     <div id="home">
-        <div id="contact" class="contact">
-            <div class="section secondary-section">
-                @if(Route::currentRouteName() != 'HomePage')
+    <div id="contact" class="contact">
+    <div class="section secondary-section">
+                
+                @if(Route::currentRouteName() != 'HomePage' and Route::currentRouteName() != 'FallBack')
                     <div class="container">
-                        <div class="title">
-                            <h1>@yield('title')</h1>
+                        <div id="pagetitle">
+                            <h2>@yield('title')</h2>
                         </div>
-                    <div>
+
+                        @if(isset($links))
+                        <div class="links">
+                            @include('front.links')
+                        </div>  
+                        @endif
+
+                    </div>
                 @endif
 
-            @yield('content')
-            </div>
-        </div>
+                <div class="container">
+                <div class="row">
+                    @yield('content')
+                </div>
+                </div>
+                            
+    </div>
+    </div>
     </div>
  
 
@@ -75,5 +91,14 @@
             <script src="{{ asset('js/respond.min.js') }}"></script>
         <![endif]-->
         <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d5c2949fcef76d3"></script>
+
+
     </body>
 </html>
+
+
+
+

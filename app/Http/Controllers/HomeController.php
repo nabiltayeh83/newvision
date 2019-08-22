@@ -1,8 +1,7 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\Sitesetting;
 
 class HomeController extends Controller
 {
@@ -23,6 +22,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $sitename  = Sitesetting::first()->title;
+        return view('home', compact('sitename'));
     }
 }

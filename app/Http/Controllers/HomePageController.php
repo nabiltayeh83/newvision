@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use App\Http\Requests\OrderRequest;
 use App\{
     Sitesetting,
     Page,
     Category,
-    Service
+    Service,
+    Order
     };
+
+use Session;
 
 class HomePageController extends Controller
 {
@@ -19,16 +23,17 @@ class HomePageController extends Controller
     }
 
     
-    public function about(){
+    public function aboutus(){
         $results = Page::findOrFail(1);
-        return view('front.about', compact('results'));
+        return view('front.pages', compact('results'));
     }
 
 
     public function contactus(){
         $results = Page::findOrFail(2);
-        return view('front.contact', compact('results'));
+        return view('front.pages', compact('results'));
     }
+
 
 
     public function category(){
@@ -37,21 +42,27 @@ class HomePageController extends Controller
     }
 
 
-    public function order(){
-        return view('front.orders');
-    }
-
-
     public function services($id){
-        $results = Service::where('category_id', $id)->where('is_active', 1)->orderBy('id', 'desc')->paginate(12);
-        $category = Category::find($id)->title;
-        return view('front.service', compact('results', 'category'));
+        $category  =  Category::findOrFail($id);
+        return view('front.service', compact('category'));
     }
 
 
     public function details($id){
         $results = Service::findOrFail($id);
         return view('front.details', compact('results'));
+    }
+
+
+    public function order(){
+        $categories  = Category::pluck('title', 'id');
+        return view('front.orders', compact('categories'));
+    }
+
+    public function ordersave(OrderRequest $request){
+        Order::create($request->all());
+        Session::flash("msg", "s: شكراً لك, لقد تم إرسال الطلب بنجاح, وسوف تتم المتابعة معك خلال أقرب وقت");
+        return redirect()->route('order');
     }
 
 

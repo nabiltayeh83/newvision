@@ -8,17 +8,18 @@
     text-align: right;
 }
 a {
-    color:#181A1C;
+    color:#fff;
     text-decoration: none;
 }
 a:hover {
-    color: #FECE1A;
+    color: #fff;
     text-decoration:none;
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     direction: rtl;
     line-height: 1.5;
+    color:#fff;
 }
 h1 {
     margin: 10px;
@@ -28,9 +29,10 @@ p {
     font-weight: 100;
     color: #fff;
     line-height: 1.9;
+    text-align: justify;
 }
 .navbar {
-    background: #181A1C;
+    background: #fff;
     margin-bottom:0;
     min-height:70px;
 }
@@ -41,15 +43,15 @@ p {
     padding-top:0;
 }
 .navbar-inner {
-    background: #181A1C;
+    background: #fff;
     border-radius:0;
     filter: none;
     border: none;
     box-shadow: none;
 }
 .navbar .brand img {
-    width:120px;
-    height:40px;
+    width:240px;
+    height:80px;
 }
 .navbar .nav > li > a {
     text-transform:uppercase;
@@ -62,13 +64,15 @@ p {
     box-shadow: none;
     font-size:15px;
     text-shadow: none;
-    color: #fff;
+    color: #000;
     transition: border-color 1s ease;
 }
+
+
+
 .navbar .nav > li:hover> a, .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
-    border: 1px solid #FECE1A;
     color: #fff;
-    background-color: #181A1C;
+    background-color: #a90359;
     transition: border-color 1s ease;
 }
 .nav-pills {
@@ -82,7 +86,7 @@ p {
     margin-right:5px;
     padding-left:25px;
     padding-right:25px;
-    border: 1px solid #181A1C;
+    border: 1px solid #a90359;
 }
 .nav-pills > li > a:hover, .nav-pills > .active > a, .nav-pills > .active > a:hover, .nav-pills > .active > a:focus {
     background: #181A1C;
@@ -90,8 +94,9 @@ p {
 }
 .navbar .btn-navbar:hover, .navbar .btn-navbar {
     border-radius:0;
-    background:#FECE1A;
-    color: #000;
+    background:#a90359;
+    color: #fff;
+    margin-top: 30px;
 }
 /******
 2. Layout
@@ -123,7 +128,7 @@ p {
     margin-bottom:20px;
 }
 .highlighted-box h1, .highlighted-box p {
-    color: #181A1C !important;
+    color: #fff !important;
 }
 .circle-border {
     display: inline-block;
@@ -147,16 +152,7 @@ p {
     display:none;
     visibility:visible;
 }
-.triangle {
-    margin: 0 auto;
-    text-align:center;
-    width: 0;
-    height: 0;
-    border-top: 30px solid #181A1C;
-    border-left: 585px outset transparent;
-    border-right: 585px outset transparent;
-    position: relative;
-}
+
 /*
 2.1 Animations
 **********/
@@ -180,35 +176,46 @@ p {
 /*
 2.2 Buttons - There are buttons on a transparent background, primary and secondary color background.
 **********/
+
+
+
+
+
  .button,  .button:visited, .button:focus {
     display:inline-block;
-    border:1px solid #181A1C;
-    color:#181A1C;
-    background-color:transparent;
+    border:1px solid #666;
+    color:#fff;
+    background-color:#000;
     padding:15px 30px;
     font-size:17px;
     line-height:auto;
 }
+
+#pagetitle h2{
+    color: #fff;
+    text-align: center;
+}
+
 .button:hover, .button:active{
-    background-color:#181A1C;
-    color:#fff;
+    color:#000;
+    background-color: #fff;
 }
 .button-sp, .button-sp:visited, .button-sp:focus {
     border:none;
-    background-color:#FECE1A;
+    background-color:#a90359;
     color:#181A1C;
 }
 .button-sp:hover, .button-sp:active {
     background-color:#181A1C;
-    color:#FECE1A;
+    color:#a90359;
 }
 .button-ps, .button-ps:visited, .button-ps:focus {
     border:none;
     background-color:#181A1C;
-    color:#FECE1A;
+    color:#a90359;
 }
 .button-ps:hover, .button-ps:active {
-    background-color:#FECE1A;
+    background-color:#a90359;
     color:#181A1C;
 }
 /*
@@ -259,7 +266,7 @@ p {
     z-index:4;
 }
 .thumbnail h3 {
-    color: #FECE1A;
+    color: #fff;
     margin-top:10px;
     font-size:20px;
 }
@@ -305,7 +312,7 @@ p {
     padding:0;
     width:32px;
     height:32px;
-    color: #FECE1A;
+    color: #a90359;
 }
 .social li a:hover {
     color:#181A1C;
@@ -321,12 +328,10 @@ p {
 }
 .section .title {
     text-align: center;
-    padding:10px;
-    margin-bottom: 30px;
+
 }
 .section .title h1 {
     font-weight: normal;
-    margin-bottom: 20px;
     padding: 0;
 }
 .section .title > p {
@@ -338,32 +343,56 @@ p {
     background:#181A1C;
 }
 .primary-section .triangle {
-    border-top: 40px solid #FECE1A;
+    border-top: 40px solid #a90359;
 }
 .primary-section .title {
     border-bottom: 1px solid #FFF;
 }
 .primary-section, .primary-section .title p, .primary-section h3 {
-    color: #FECE1A;
+    color: #fff;
 }
 .primary-section h1 {
     color:#FFF;
 }
+
+
+.errorimg{
+    text-align: center;
+}
+
+#errorimg-h2{
+    color: #FFF;
+    text-align: center;
+    font-size: 17px;
+}
+
+
+.page-img{
+    width: 100%;
+}
+
+
+.links{
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #fff;
+    margin-bottom: 20px;
+}
+
 .secondary-section {
-    background:#FECE1A;
+    background:#a90359;
     min-height: 550px;
 }
 .secondary-section .title {
-    border-bottom: 1px solid #181A1C;
+    color:#fff;
 }
 .secondary-section h1, .secondary-section .title p {
-    color: #181A1C;
+    color: #fff;
 }
 /* Third section use bacground image */
 .third-section {
     padding-bottom: 70px;
     background: #181A1C url(../images/brand-bg.png) no-repeat center;
-    border-top:6px solid #FECE1A;
+    border-top:6px solid #a90359;
 }
 .third-section .container {
     padding-top:20px;
@@ -371,7 +400,7 @@ p {
 }
 .third-section .title {
     border-bottom: 1px solid #A1AAB7;
-    color: #FECE1A;
+    color: #a90359;
 }
 .sub-section {
     margin-top:30px;
@@ -383,11 +412,21 @@ p {
 3.1 Services  
 ***************************************/
 .service{
-    margin-top:20px;
+    margin-top:0px;
+    text-align: right;
+    line-height: 2;
+    font-size: 16px;
 }
  .service, .service h2 {
-    padding-top:15px;
+    padding-top:0px;
 }
+
+.prodet{
+    color:#fff;
+    font-size: 18px;
+}
+
+
 .service p {
     padding:0px 50px;
     height:60px;
@@ -414,7 +453,7 @@ p {
 .project-title {
     margin-top:15px;
     margin-bottom:15px;
-    border-bottom:1px solid #FECE1A;
+    border-bottom:1px solid #a90359;
 }
 .project-title h3 {
     float:left;
@@ -423,11 +462,11 @@ p {
     width:80%;
 }
 .project-title .close {
-    color: #FECE1A;
+    color: #fff;
     margin-top:10px;
 }
 .project-info span, .project-title h3 {
-    color:#FECE1A;
+    color:#fff;
 }
 .project-info {
     font-weight:100;
@@ -467,13 +506,13 @@ p {
     color:#fff;
 }
 .team .thumbnail .mask {
-    background: #FECE1A;
+    background: #a90359;
 }
 .team .thumbnail .mask h2 {
     margin-top:20%;
 }
 .team .thumbnail .mask, .team .thumbnail .mask h3, .team .thumbnail .mask p, .team .thumbnail:hover h3, .team .thumbnail:hover .social a:hover {
-    color:#181A17;
+    color:#fff;
 }
 .about-text {
     margin-top:30px;
@@ -503,12 +542,12 @@ p {
     margin:0;
     left: 10px;
     z-index: 1;
-    color: #181A1C;
+    color: #fff;
 }
 .skills li .bar {
     height:40px;
     position:absolute;
-    background-color: #FECE1A;
+    background-color: #a90359;
 }
 /*
 3.4 Clients
@@ -517,7 +556,7 @@ p {
     border:1px solid white;
 }
 .client-slider img:hover {
-    background-color:#FECE1A;
+    background-color:#a90359;
 }
 .client-nav {
     list-style:none;
@@ -531,7 +570,7 @@ p {
 .client-nav li a {
     display:inherit;
     padding:5px;
-    background:#FECE1A;
+    background:#a90359;
     border-radius:3px;
     width:20px;
     height:20px;
@@ -540,15 +579,15 @@ p {
     background:#181A1C;
 }
 .testimonial p {
-    color:#181A1C;
-    background:#FECE1A;
+    color:#fff;
+    background:#a90359;
     padding:15px;
     margin:0;
 }
 .testimonial .arrow {
     margin-left:10px;
     width:0;
-    border-top:10px solid #FECE1A;
+    border-top:10px solid #a90359;
     border-left: 20px outset transparent;
     border-right: 20px outset transparent;
 }
@@ -600,7 +639,7 @@ p {
     background-color:#181A1C;
     text-transform:uppercase;
     text-align: center;
-    color:#FECE1A;
+    color:#fff;
     padding:40px 0px;
     font-size: 36px;
     margin-top:0px;
@@ -614,7 +653,7 @@ p {
 }
 .price-column .list li{
     font-weight:lighter;
-    color:#747C89;
+    color:#fff;
     font-size:20px;
     border-bottom:1px solid #747C89;
     padding:25px 0px;
@@ -623,7 +662,7 @@ p {
     text-align: center;
     font-size:31px;
     background-color:white;
-    color:#747C89;
+    color:#fff;
     margin-top:25px;
 }
 .price-text{
@@ -636,7 +675,7 @@ p {
 3.6 Newsletter
 ********************************************************************/
  .newsletter, .newsletter h2 {
-    color: #D7DDDE;
+    color: #fff;
 }
 .newsletter .title h2 {
     text-align:left;
@@ -656,17 +695,17 @@ p {
 }
 .newsletter .button-sp:hover, .newsletter .button-sp:active {
     background-color:#FFF;
-    color:#181A1C;
+    color:#fff;
 }
 
 /*
 3.7 Contact
 ********************************************************************/
  .contact {
-    background: #FECE1A;
+    background: #a90359;
 }
 .contact h1, .contact h2, .contact h3, .contact h4, .contact h5, .contact h6, .contact .section .title > p, .contact .social > li > a {
-    color: #181A1C;
+    color: #fff;
 }
 .contact textarea, .contact input[type="text"], .contact input[type="email"] {
     padding: 10px;
@@ -707,7 +746,7 @@ p {
     margin-bottom:20px;
     width:100%;
     height:500px;
-    color: #29383F;
+    color: #fff;
     position:absolute;
     left:0;
     top:0;
@@ -729,7 +768,7 @@ p {
     color:#fff;
 }
 .contact .social li a:hover {
-    color:#181A1C;
+    color:#fff;
 }
 .contact-form {
     background:#fff;
@@ -740,18 +779,41 @@ p {
     padding:20px;
 }
 .contact-form h3 {
-    color:#838589;
+    color:#fff;
     padding-bottom:20px;
 }
+
+
+.controls input, select, textarea, button{
+    font-family: cairo;
+}
+
+.controls input, select, textarea{
+    width:100%;
+}
+
+.controls select{
+    width:98%;
+    padding: 5px;
+    height: 40px;
+}
+
+.controls span{
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+}
+
 .message-btn {
-    border:1px solid #747C89;
-    color:#747C89;
+    border:1px solid #000;
+    color:#fff;
     background-color:transparent;
     padding:15px 30px;
-    font-size:17px;
+    font-size:15px;
 }
 .message-btn:hover {
-    background-color:#FECE1A;
+    background-color:rgb(12, 12, 12);
+    color:#fff;
 }
 .contact-info {
     text-align:center;
@@ -762,11 +824,18 @@ p {
     width:60%;
     margin:0 auto;
     padding:15px;
-    color:#181A1C;
+    color:#fff;
 }
 .black {
-    color:#181A1C;
+    color:#fff;
 }
+
+
+#cat_des{
+    font-size: 16px;
+}
+
+
 /*
 3.8 Footer
 ********************************************************************/
@@ -777,10 +846,11 @@ p {
 .footer > p {
     color: #fff;
     margin:0;
+    text-align: center;
 }
 
 .footer a{
-    color:#FECE1A;
+    color:#a90359;
 }
 
 .footer a:hover, .footer a:focus{
@@ -799,7 +869,7 @@ p {
     right:20px;
 	border:1px solid #fff;
     display:none;
-    background: #FECE1A;
+    background: #a90359;
 }
 .scrollup > a {
     position:relative;
@@ -1004,8 +1074,22 @@ p {
 
 
 
+.margin-b15{
+    margin-bottom: 15px;
+}
 
 
+.margin-t15{
+    margin-top: 15px;
+}
+
+.margin-t30{
+    margin-top: 30px;
+}
+
+.margin-t10per{
+    margin-top: 10%;
+}
 
 
 
@@ -1042,7 +1126,7 @@ p {
     A utility with a max width that contains child elements and horizontal centers them
   */
   .wrapper-three {
-    max-width: 65rem;
+    max-width: 73rem;
     margin: 0 auto;
     padding: 0 1rem;
   }
@@ -1052,9 +1136,9 @@ p {
   
   .auto-grid-three li {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 17px;
     list-style-type: none;
-    line-height: 1.5;
+    line-height: 1.2;
   }
 
 
